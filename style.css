@@ -56,7 +56,7 @@ nav {
   border-bottom: 1px solid var(--black);
 }
 .hero-main {
-  padding: 6vw 2.5rem 3rem;
+  padding: 2rem 2.5rem 3rem;
 }
 .hero-eyebrow {
   font-family: var(--font-mono);
@@ -267,7 +267,7 @@ footer a:hover { color: var(--black); }
   .nav-links { gap: 1rem; }
   .nav-links a { font-size: 0.7rem; }
   section { padding: 3.5rem 1.25rem; }
-  .hero-main { padding: 4vw 1.25rem 2rem; text-align: center; }
+  .hero-main { padding: 1.5rem 1.25rem 2rem; text-align: center; }
   .hero-footer { padding: 1.25rem; flex-direction: column; align-items: center; gap: 1.25rem; }
   .hero-meta { text-align: center; }
   .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
