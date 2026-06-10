@@ -52,7 +52,7 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  padding-top: 80px;
+  padding: 80px 0 0;
   border-bottom: 1px solid var(--black);
 }
 .hero-main {
@@ -267,7 +267,7 @@ footer a:hover { color: var(--black); }
   .nav-links { gap: 1rem; }
   .nav-links a { font-size: 0.7rem; }
   section { padding: 3.5rem 1.25rem; }
-  .hero-main { padding: 4vw 1.25rem 2rem; }
+  .hero-main { padding: 4vw 1.25rem 2rem; text-align: center; }
   .hero-footer { padding: 1.25rem; flex-direction: column; align-items: center; gap: 1.25rem; }
   .hero-meta { text-align: center; }
   .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
