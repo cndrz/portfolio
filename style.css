@@ -93,7 +93,7 @@ nav {
 .hero-meta {
   font-family: var(--font-mono);
   font-size: 0.75rem; color: var(--gray-600);
-  text-align: right; line-height: 1.8;
+  text-align: right;
 }
 .hero-cta {
   margin-top: 1rem;
