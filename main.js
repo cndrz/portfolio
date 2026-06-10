@@ -156,7 +156,7 @@ function renderAll() {
   document.getElementById("hero-lastname").textContent = p.lastname;
   document.getElementById("hero-tagline").textContent = p.tagline;
   document.getElementById("hero-eyebrow").textContent = p.eyebrow;
-  document.getElementById("hero-cta-link").href = "mailto:" + p.email;
+  document.getElementById("hero-cta-link").href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + p.email;
   document.getElementById("hero-meta-school").textContent =
     p.education.split("·")[0]?.trim() || "";
   document.getElementById("hero-meta-year").textContent = p.education;
@@ -171,13 +171,13 @@ function renderAll() {
   document.getElementById("aside-location").textContent = p.location;
   document.getElementById("aside-education").textContent = p.education;
   document.getElementById("aside-email").textContent = p.email;
-  document.getElementById("aside-email").href = "mailto:" + p.email;
+  document.getElementById("aside-email").href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + p.email;
   document.getElementById("aside-github").textContent = ghHandle;
   document.getElementById("aside-github").href = p.github;
   document.getElementById("aside-phone").textContent = p.phone;
 
   // Contact
-  document.getElementById("contact-email-link").href = "mailto:" + p.email;
+  document.getElementById("contact-email-link").href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + p.email;
   document.getElementById("contact-github-link").href = p.github;
 
   // Skills
