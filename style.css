@@ -265,8 +265,16 @@ footer a:hover { color: var(--black); }
 @media (max-width: 768px) {
   nav { padding: 1rem 1.25rem; }
   .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.7rem; }
   section { padding: 3.5rem 1.25rem; }
   .hero-main { padding: 4vw 1.25rem 2rem; }
   .hero-footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
   .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .about-aside { border-left: none; padding-left: 0; }
+  .exp-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  .exp-date { white-space: normal; }
+  .skill-group { padding: 1.25rem; }
+  .project-card { padding: 1.5rem; }
+  .contact-link { padding: 1rem 1.25rem; }
+  footer { flex-direction: column; text-align: center; gap: 0.25rem; }
 }
