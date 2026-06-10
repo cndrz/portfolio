@@ -53,14 +53,10 @@ nav {
 /* ── HERO ── */
 .hero {
   padding-top: 80px;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
   border-bottom: 1px solid var(--black);
 }
 .hero-main {
   padding: 6vw 2.5rem 3rem;
-  display: flex; flex-direction: column; justify-content: flex-end;
 }
 .hero-eyebrow {
   font-family: var(--font-mono);
