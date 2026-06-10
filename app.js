@@ -143,7 +143,15 @@
   function getData() {
     try {
       var d = localStorage.getItem("portfolio_data");
-      return d ? JSON.parse(d) : JSON.parse(JSON.stringify(DEFAULTS));
+      if (d) {
+        var parsed = JSON.parse(d);
+        if (parsed.password && !parsed.password.startsWith("h")) {
+          parsed.password = hashStr(parsed.password);
+          saveData(parsed);
+        }
+        return parsed;
+      }
+      return JSON.parse(JSON.stringify(DEFAULTS));
     } catch (_) {
       return JSON.parse(JSON.stringify(DEFAULTS));
     }
