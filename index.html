@@ -1,700 +1,306 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jose Mari G. Dela Cruz — Portfolio</title>
-        <meta
-            name="description"
-            content="Computer Science student & developer building AI-powered solutions, full-stack web apps, and developer tools."
-        />
-        <meta
-            property="og:title"
-            content="Jose Mari G. Dela Cruz — Portfolio"
-        />
-        <meta
-            property="og:description"
-            content="Computer Science student & developer building AI-powered solutions, full-stack web apps, and developer tools."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://github.com/cndrz" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <nav aria-label="Main navigation">
-                <a class="nav-logo" href="#" id="nav-home-link">JMGDC</a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose Mari G. Dela Cruz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<nav>
+  <a class="nav-logo" onclick="navigate('home')" href="#">JMGDC</a>
+  <ul class="nav-links">
+    <li><a href="#about" onclick="navigate('home')">About</a></li>
+    <li><a href="#projects" onclick="navigate('home')">Projects</a></li>
+    <li><a href="#contact" onclick="navigate('home')">Contact</a></li>
+  </ul>
+</nav>
 
-            <!-- ════════════ HOME PAGE ════════════ -->
-            <div class="page active" id="home-page">
-                <!-- HERO -->
-                <section class="hero" id="hero">
-                    <div class="hero-main">
-                        <p class="hero-eyebrow" id="hero-eyebrow">
-                            Computer Science Student & Developer — Metro Manila,
-                            Philippines
-                        </p>
-                        <h1 class="hero-name">
-                            <span class="line-thin" id="hero-firstname"
-                                >Jose Mari</span
-                            >
-                            <span class="line-bold" id="hero-lastname"
-                                >Dela Cruz</span
-                            >
-                        </h1>
-                        <div class="hero-rule"></div>
-                        <p class="hero-role" id="hero-tagline">
-                            Building AI-powered solutions, full-stack web apps,
-                            and developer tools. Currently finishing a BS
-                            Computer Science at OLFU.
-                        </p>
-                    </div>
-                    <div class="hero-footer">
-                        <div>
-                            <a
-                                class="hero-cta"
-                                id="hero-cta-link"
-                                href="mailto:jmdelacruz2735@gmail.com"
-                                >Get in Touch ↗</a
-                            >
-                        </div>
-                        <div class="hero-meta">
-                            <div id="hero-meta-school">
-                                Our Lady of Fatima University
-                            </div>
-                            <div id="hero-meta-year">
-                                BS Computer Science · 2022–2026
-                            </div>
-                            <div id="hero-meta-github">github.com/cndrz</div>
-                        </div>
-                    </div>
-                </section>
+<div class="toast" id="toast"></div>
 
-                <!-- ABOUT -->
-                <section id="about" aria-label="About me">
-                    <div class="section-label">About</div>
-                    <div class="about-grid">
-                        <div class="about-text" id="about-text">
-                            <p>
-                                I'm a computer science student specializing in
-                                full-stack development and AI integration. My
-                                work spans web applications, desktop tools, and
-                                intelligent systems — built with a focus on real
-                                user impact.
-                            </p>
-                            <p>
-                                I've worked as a Software Engineering Intern at
-                                JL Uni Multiserv Inc., where I built and
-                                deployed a production company website. I've also
-                                built and shipped several AI-powered products
-                                independently.
-                            </p>
-                            <p>
-                                My thesis, LabBase, is an AI-powered job order
-                                system that streamlines preventive maintenance
-                                workflows for laboratory equipment services —
-                                combining practical engineering with intelligent
-                                automation.
-                            </p>
-                        </div>
-                        <div class="about-aside">
-                            <div class="aside-item">
-                                <div class="label">Location</div>
-                                <div class="value" id="aside-location">
-                                    Caloocan City, Metro Manila
-                                </div>
-                            </div>
-                            <div class="aside-item">
-                                <div class="label">Education</div>
-                                <div class="value" id="aside-education">
-                                    BS Computer Science, OLFU · 2022–2026
-                                </div>
-                            </div>
-                            <div class="aside-item">
-                                <div class="label">Contact</div>
-                                <div class="value">
-                                    <a
-                                        id="aside-email"
-                                        href="mailto:jmdelacruz2735@gmail.com"
-                                        >jmdelacruz2735@gmail.com</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="aside-item">
-                                <div class="label">GitHub</div>
-                                <div class="value">
-                                    <a
-                                        id="aside-github"
-                                        href="https://github.com/cndrz"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >github.com/cndrz</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="aside-item">
-                                <div class="label">Phone</div>
-                                <div class="value" id="aside-phone">
-                                    +63 956 008 3446
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+<!-- ════════════ HOME PAGE ════════════ -->
+<div class="page active" id="home-page">
 
-                <!-- SKILLS -->
-                <section id="skills" aria-label="Skills">
-                    <div class="section-label">Skills</div>
-                    <div class="skills-grid" id="skills-grid"></div>
-                </section>
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding:0; border-bottom: 1px solid #000;">
+    <div class="hero-main">
+      <p class="hero-eyebrow" id="hero-eyebrow">Computer Science Student & Developer — Metro Manila, Philippines</p>
+      <h1 class="hero-name">
+        <span class="line-thin" id="hero-firstname">Jose Mari</span>
+        <span class="line-bold" id="hero-lastname">Dela Cruz</span>
+      </h1>
+      <div class="hero-rule"></div>
+      <p class="hero-role" id="hero-tagline">Building AI-powered solutions, full-stack web apps, and developer tools. Currently finishing a BS Computer Science at OLFU.</p>
+    </div>
+    <div class="hero-footer">
+      <div>
+        <a class="hero-cta" id="hero-cta-link" href="mailto:jmdelacruz2735@gmail.com">Get in Touch ↗</a>
+      </div>
+      <div class="hero-meta">
+        <div id="hero-meta-school">Our Lady of Fatima University</div>
+        <div id="hero-meta-year">BS Computer Science · 2022–2026</div>
+        <div id="hero-meta-github">github.com/cndrz</div>
+      </div>
+    </div>
+  </section>
 
-                <!-- EXPERIENCE -->
-                <section id="experience" aria-label="Experience">
-                    <div class="section-label">Experience</div>
-                    <div class="exp-list" id="exp-list"></div>
-                </section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-text" id="about-text"></div>
+      <div class="about-aside">
+        <div class="aside-item">
+          <div class="label">Location</div>
+          <div class="value" id="aside-location">Caloocan City, Metro Manila</div>
+        </div>
+        <div class="aside-item">
+          <div class="label">Education</div>
+          <div class="value" id="aside-education">BS Computer Science, OLFU · 2022–2026</div>
+        </div>
+        <div class="aside-item">
+          <div class="label">Contact</div>
+          <div class="value"><a id="aside-email" href="#">—</a></div>
+        </div>
+        <div class="aside-item">
+          <div class="label">GitHub</div>
+          <div class="value"><a id="aside-github" href="#" target="_blank">—</a></div>
+        </div>
+        <div class="aside-item">
+          <div class="label">Phone</div>
+          <div class="value" id="aside-phone">—</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- PROJECTS -->
-                <section id="projects" aria-label="Projects">
-                    <div class="section-label">Projects</div>
-                    <div class="projects-grid" id="projects-grid"></div>
-                </section>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">Skills</div>
+    <div class="skills-grid" id="skills-grid"></div>
+  </section>
 
-                <!-- CERTIFICATIONS -->
-                <section id="certifications" aria-label="Certifications">
-                    <div class="section-label">Certifications</div>
-                    <div class="certs-list" id="certs-list"></div>
-                </section>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Experience</div>
+    <div class="exp-list" id="exp-list"></div>
+  </section>
 
-                <!-- CONTACT -->
-                <section id="contact" aria-label="Contact">
-                    <div class="contact-inner">
-                        <div class="contact-big">
-                            Let's<br />build<br />something.
-                        </div>
-                        <div class="contact-links" id="contact-links">
-                            <a
-                                class="contact-link"
-                                id="contact-email-link"
-                                href="mailto:jmdelacruz2735@gmail.com"
-                            >
-                                <span>Email</span><span class="arrow">↗</span>
-                            </a>
-                            <a
-                                class="contact-link"
-                                id="contact-github-link"
-                                href="https://github.com/cndrz"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span>GitHub</span><span class="arrow">↗</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Projects</div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
 
-                <footer>
-                    <span>Jose Mari G. Dela Cruz © 2026</span>
-                    <a href="#" id="nav-admin-link" style="cursor: pointer"
-                        >Admin</a
-                    >
-                </footer>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-label">Certifications</div>
+    <div class="certs-list" id="certs-list"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-big">Let's<br>build<br>something.</div>
+      <div class="contact-links">
+        <a class="contact-link" id="contact-email-link" href="#">
+          <span>Email</span><span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" id="contact-github-link" href="#" target="_blank">
+          <span>GitHub</span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Jose Mari G. Dela Cruz © 2026</span>
+    <a onclick="navigate('admin'); return false;" href="#">Admin</a>
+  </footer>
+</div>
+
+<!-- ════════════ ADMIN PAGE ════════════ -->
+<div class="page" id="admin-page">
+  <!-- LOGIN STATE -->
+  <div id="admin-login-view">
+    <div class="admin-login">
+      <div class="login-box">
+        <h2>Admin Access</h2>
+        <p>Enter password to continue</p>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
+        </div>
+        <button class="btn btn-white" onclick="doLogin()">Enter</button>
+        <div class="login-error" id="login-error">Incorrect password</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHENTICATED STATE -->
+  <div id="admin-auth-view" style="display:none;">
+    <div class="admin-header">
+      <h1>Portfolio Admin</h1>
+      <div style="display:flex;gap:1rem;align-items:center;">
+        <span class="admin-badge">Authenticated</span>
+        <button class="btn btn-outline btn-sm" onclick="doLogout()">Logout</button>
+        <button class="btn btn-white btn-sm" onclick="navigate('home')">← View Site</button>
+      </div>
+    </div>
+    <div class="admin-body">
+      <div class="admin-sidebar">
+        <button class="admin-nav-item active" onclick="switchTab('profile', this)">Profile</button>
+        <button class="admin-nav-item" onclick="switchTab('skills', this)">Skills</button>
+        <button class="admin-nav-item" onclick="switchTab('experience', this)">Experience</button>
+        <button class="admin-nav-item" onclick="switchTab('projects', this)">Projects</button>
+        <button class="admin-nav-item" onclick="switchTab('certifications', this)">Certifications</button>
+        <button class="admin-nav-item" onclick="switchTab('settings', this)">Settings</button>
+      </div>
+      <div class="admin-content">
+
+        <!-- PROFILE TAB -->
+        <div class="admin-section active" id="tab-profile">
+          <h2>Profile</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="p-firstname">
             </div>
-
-            <!-- ════════════ ADMIN PAGE ════════════ -->
-            <div class="page" id="admin-page">
-                <!-- LOGIN STATE -->
-                <div id="admin-login-view">
-                    <div class="admin-login">
-                        <div class="login-box">
-                            <h2>Admin Access</h2>
-                            <p>Enter password to continue</p>
-                            <div class="form-group">
-                                <label for="login-password">Password</label>
-                                <input
-                                    type="password"
-                                    id="login-password"
-                                    placeholder="••••••••"
-                                />
-                            </div>
-                            <button class="btn btn-white" id="login-btn">
-                                Enter
-                            </button>
-                            <div class="login-error" id="login-error">
-                                Incorrect password
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AUTHENTICATED STATE -->
-                <div id="admin-auth-view" style="display: none">
-                    <div class="admin-header">
-                        <h1>Portfolio Admin</h1>
-                        <div
-                            style="
-                                display: flex;
-                                gap: 1rem;
-                                align-items: center;
-                            "
-                        >
-                            <span class="admin-badge">Authenticated</span>
-                            <button
-                                class="btn btn-outline btn-sm"
-                                id="logout-btn"
-                            >
-                                Logout
-                            </button>
-                            <button
-                                class="btn btn-white btn-sm"
-                                id="view-site-btn"
-                            >
-                                ← View Site
-                            </button>
-                        </div>
-                    </div>
-                    <div class="admin-body">
-                        <nav
-                            class="admin-sidebar"
-                            aria-label="Admin navigation"
-                        >
-                            <button
-                                class="admin-nav-item active"
-                                data-tab="profile"
-                            >
-                                Profile
-                            </button>
-                            <button class="admin-nav-item" data-tab="skills">
-                                Skills
-                            </button>
-                            <button
-                                class="admin-nav-item"
-                                data-tab="experience"
-                            >
-                                Experience
-                            </button>
-                            <button class="admin-nav-item" data-tab="projects">
-                                Projects
-                            </button>
-                            <button
-                                class="admin-nav-item"
-                                data-tab="certifications"
-                            >
-                                Certifications
-                            </button>
-                            <button class="admin-nav-item" data-tab="settings">
-                                Settings
-                            </button>
-                        </nav>
-                        <div class="admin-content">
-                            <!-- PROFILE TAB -->
-                            <div class="admin-section active" id="tab-profile">
-                                <h2>Profile</h2>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="p-firstname"
-                                            >First Name</label
-                                        >
-                                        <input type="text" id="p-firstname" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="p-lastname"
-                                            >Last Name</label
-                                        >
-                                        <input type="text" id="p-lastname" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="p-tagline"
-                                        >Tagline / Hero Description</label
-                                    >
-                                    <textarea
-                                        id="p-tagline"
-                                        rows="2"
-                                    ></textarea>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="p-email">Email</label>
-                                        <input type="text" id="p-email" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="p-phone">Phone</label>
-                                        <input type="text" id="p-phone" />
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="p-location">Location</label>
-                                        <input type="text" id="p-location" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="p-github">GitHub URL</label>
-                                        <input type="text" id="p-github" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="p-education">Education</label>
-                                    <input type="text" id="p-education" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="p-eyebrow"
-                                        >Hero Eyebrow Text</label
-                                    >
-                                    <input type="text" id="p-eyebrow" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="p-about"
-                                        >About Paragraphs (separate with blank
-                                        line)</label
-                                    >
-                                    <textarea id="p-about" rows="8"></textarea>
-                                </div>
-                                <button
-                                    class="btn btn-white"
-                                    id="save-profile-btn"
-                                >
-                                    Save Profile
-                                </button>
-                            </div>
-
-                            <!-- SKILLS TAB -->
-                            <div class="admin-section" id="tab-skills">
-                                <h2>Skills</h2>
-                                <div
-                                    id="skills-admin-list"
-                                    class="admin-list"
-                                ></div>
-                                <div
-                                    style="
-                                        border: 1px solid #333;
-                                        padding: 1.5rem;
-                                        margin-top: 1rem;
-                                    "
-                                >
-                                    <h3
-                                        style="
-                                            font-family: var(--font-display);
-                                            font-size: 1rem;
-                                            margin-bottom: 1.25rem;
-                                            color: #aaa;
-                                        "
-                                    >
-                                        Add Skill Group
-                                    </h3>
-                                    <div class="form-group">
-                                        <label for="skill-group-name"
-                                            >Group Name (e.g. Frontend)</label
-                                        >
-                                        <input
-                                            type="text"
-                                            id="skill-group-name"
-                                        />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="skill-group-items"
-                                            >Skills (comma-separated)</label
-                                        >
-                                        <input
-                                            type="text"
-                                            id="skill-group-items"
-                                            placeholder="React, TypeScript, Tailwind CSS"
-                                        />
-                                    </div>
-                                    <button
-                                        class="btn btn-white"
-                                        id="add-skill-btn"
-                                    >
-                                        Add Group
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- EXPERIENCE TAB -->
-                            <div class="admin-section" id="tab-experience">
-                                <h2>Experience</h2>
-                                <div
-                                    id="exp-admin-list"
-                                    class="admin-list"
-                                ></div>
-                                <div
-                                    style="
-                                        border: 1px solid #333;
-                                        padding: 1.5rem;
-                                        margin-top: 1rem;
-                                    "
-                                >
-                                    <h3
-                                        style="
-                                            font-family: var(--font-display);
-                                            font-size: 1rem;
-                                            margin-bottom: 1.25rem;
-                                            color: #aaa;
-                                        "
-                                    >
-                                        Add Experience
-                                    </h3>
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label for="exp-title">Title</label
-                                            ><input
-                                                type="text"
-                                                id="exp-title"
-                                            />
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exp-company"
-                                                >Company</label
-                                            ><input
-                                                type="text"
-                                                id="exp-company"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label for="exp-date"
-                                                >Date Range</label
-                                            ><input
-                                                type="text"
-                                                id="exp-date"
-                                                placeholder="Feb 2026 – May 2026"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exp-desc">Description</label
-                                        ><textarea
-                                            id="exp-desc"
-                                            rows="3"
-                                        ></textarea>
-                                    </div>
-                                    <button
-                                        class="btn btn-white"
-                                        id="add-exp-btn"
-                                    >
-                                        Add Experience
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- PROJECTS TAB -->
-                            <div class="admin-section" id="tab-projects">
-                                <h2>Projects</h2>
-                                <div
-                                    id="projects-admin-list"
-                                    class="admin-list"
-                                ></div>
-                                <div
-                                    style="
-                                        border: 1px solid #333;
-                                        padding: 1.5rem;
-                                        margin-top: 1rem;
-                                    "
-                                >
-                                    <h3
-                                        style="
-                                            font-family: var(--font-display);
-                                            font-size: 1rem;
-                                            margin-bottom: 1.25rem;
-                                            color: #aaa;
-                                        "
-                                    >
-                                        Add Project
-                                    </h3>
-                                    <div class="form-group">
-                                        <label for="proj-name"
-                                            >Project Name</label
-                                        ><input type="text" id="proj-name" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="proj-desc"
-                                            >Description</label
-                                        ><textarea
-                                            id="proj-desc"
-                                            rows="3"
-                                        ></textarea>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label for="proj-url"
-                                                >Link URL</label
-                                            ><input
-                                                type="text"
-                                                id="proj-url"
-                                                placeholder="https://..."
-                                            />
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="proj-link-label"
-                                                >Link Label</label
-                                            ><input
-                                                type="text"
-                                                id="proj-link-label"
-                                                placeholder="View Live / GitHub"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="proj-tech"
-                                            >Tech Stack (comma-separated)</label
-                                        ><input
-                                            type="text"
-                                            id="proj-tech"
-                                            placeholder="React, Node.js, Postgres"
-                                        />
-                                    </div>
-                                    <button
-                                        class="btn btn-white"
-                                        id="add-project-btn"
-                                    >
-                                        Add Project
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- CERTIFICATIONS TAB -->
-                            <div class="admin-section" id="tab-certifications">
-                                <h2>Certifications</h2>
-                                <div
-                                    id="certs-admin-list"
-                                    class="admin-list"
-                                ></div>
-                                <div
-                                    style="
-                                        border: 1px solid #333;
-                                        padding: 1.5rem;
-                                        margin-top: 1rem;
-                                    "
-                                >
-                                    <h3
-                                        style="
-                                            font-family: var(--font-display);
-                                            font-size: 1rem;
-                                            margin-bottom: 1.25rem;
-                                            color: #aaa;
-                                        "
-                                    >
-                                        Add Certification
-                                    </h3>
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label for="cert-name">Name</label
-                                            ><input
-                                                type="text"
-                                                id="cert-name"
-                                            />
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="cert-date">Date</label
-                                            ><input
-                                                type="text"
-                                                id="cert-date"
-                                                placeholder="January 2026"
-                                            />
-                                        </div>
-                                    </div>
-                                    <button
-                                        class="btn btn-white"
-                                        id="add-cert-btn"
-                                    >
-                                        Add Certification
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- SETTINGS TAB -->
-                            <div class="admin-section" id="tab-settings">
-                                <h2>Settings</h2>
-                                <div
-                                    style="
-                                        border: 1px solid #333;
-                                        padding: 1.5rem;
-                                        margin-bottom: 1.5rem;
-                                    "
-                                >
-                                    <h3
-                                        style="
-                                            font-family: var(--font-display);
-                                            font-size: 1rem;
-                                            margin-bottom: 1.25rem;
-                                            color: #aaa;
-                                        "
-                                    >
-                                        Change Password
-                                    </h3>
-                                    <div class="form-group">
-                                        <label for="new-pw">New Password</label
-                                        ><input type="password" id="new-pw" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="confirm-pw"
-                                            >Confirm Password</label
-                                        ><input
-                                            type="password"
-                                            id="confirm-pw"
-                                        />
-                                    </div>
-                                    <button
-                                        class="btn btn-white"
-                                        id="change-pw-btn"
-                                    >
-                                        Update Password
-                                    </button>
-                                </div>
-                                <div
-                                    style="
-                                        border: 1px solid #c003;
-                                        padding: 1.5rem;
-                                    "
-                                >
-                                    <h3
-                                        style="
-                                            font-family: var(--font-display);
-                                            font-size: 1rem;
-                                            margin-bottom: 0.75rem;
-                                            color: #c44;
-                                        "
-                                    >
-                                        Danger Zone
-                                    </h3>
-                                    <p
-                                        style="
-                                            font-family: var(--font-mono);
-                                            font-size: 0.75rem;
-                                            color: #555;
-                                            margin-bottom: 1.25rem;
-                                        "
-                                    >
-                                        Reset all content to defaults. This
-                                        cannot be undone.
-                                    </p>
-                                    <button
-                                        class="btn btn-danger btn-sm"
-                                        id="reset-data-btn"
-                                    >
-                                        Reset to Defaults
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="p-lastname">
             </div>
+          </div>
+          <div class="form-group">
+            <label>Tagline / Hero Description</label>
+            <textarea id="p-tagline" rows="2"></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" id="p-email">
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="text" id="p-phone">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" id="p-location">
+            </div>
+            <div class="form-group">
+              <label>GitHub URL</label>
+              <input type="text" id="p-github">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Education</label>
+            <input type="text" id="p-education">
+          </div>
+          <div class="form-group">
+            <label>Hero Eyebrow Text</label>
+            <input type="text" id="p-eyebrow">
+          </div>
+          <div class="form-group">
+            <label>About Paragraphs (separate with blank line)</label>
+            <textarea id="p-about" rows="8"></textarea>
+          </div>
+          <button class="btn btn-white" onclick="saveProfile()">Save Profile</button>
+        </div>
 
-        <script src="app.js" defer></script>
-    </body>
+        <!-- SKILLS TAB -->
+        <div class="admin-section" id="tab-skills">
+          <h2>Skills</h2>
+          <div id="skills-admin-list" class="admin-list"></div>
+          <div style="border:1px solid #333; padding:1.5rem; margin-top:1rem;">
+            <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:1.25rem;color:#aaa;">Add Skill Group</h3>
+            <div class="form-group">
+              <label>Group Name (e.g. Frontend)</label>
+              <input type="text" id="skill-group-name">
+            </div>
+            <div class="form-group">
+              <label>Skills (comma-separated)</label>
+              <input type="text" id="skill-group-items" placeholder="React, TypeScript, Tailwind CSS">
+            </div>
+            <button class="btn btn-white" onclick="addSkillGroup()">Add Group</button>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE TAB -->
+        <div class="admin-section" id="tab-experience">
+          <h2>Experience</h2>
+          <div id="exp-admin-list" class="admin-list"></div>
+          <div style="border:1px solid #333; padding:1.5rem; margin-top:1rem;">
+            <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:1.25rem;color:#aaa;">Add Experience</h3>
+            <div class="form-row">
+              <div class="form-group"><label>Title</label><input type="text" id="exp-title"></div>
+              <div class="form-group"><label>Company</label><input type="text" id="exp-company"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Date Range</label><input type="text" id="exp-date" placeholder="Feb 2026 – May 2026"></div>
+            </div>
+            <div class="form-group"><label>Description</label><textarea id="exp-desc" rows="3"></textarea></div>
+            <button class="btn btn-white" onclick="addExperience()">Add Experience</button>
+          </div>
+        </div>
+
+        <!-- PROJECTS TAB -->
+        <div class="admin-section" id="tab-projects">
+          <h2>Projects</h2>
+          <div id="projects-admin-list" class="admin-list"></div>
+          <div style="border:1px solid #333; padding:1.5rem; margin-top:1rem;">
+            <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:1.25rem;color:#aaa;">Add Project</h3>
+            <div class="form-group"><label>Project Name</label><input type="text" id="proj-name"></div>
+            <div class="form-group"><label>Description</label><textarea id="proj-desc" rows="3"></textarea></div>
+            <div class="form-row">
+              <div class="form-group"><label>Link URL</label><input type="text" id="proj-url" placeholder="https://..."></div>
+              <div class="form-group"><label>Link Label</label><input type="text" id="proj-link-label" placeholder="View Live / GitHub"></div>
+            </div>
+            <div class="form-group"><label>Tech Stack (comma-separated)</label><input type="text" id="proj-tech" placeholder="React, Node.js, Postgres"></div>
+            <button class="btn btn-white" onclick="addProject()">Add Project</button>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS TAB -->
+        <div class="admin-section" id="tab-certifications">
+          <h2>Certifications</h2>
+          <div id="certs-admin-list" class="admin-list"></div>
+          <div style="border:1px solid #333; padding:1.5rem; margin-top:1rem;">
+            <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:1.25rem;color:#aaa;">Add Certification</h3>
+            <div class="form-row">
+              <div class="form-group"><label>Name</label><input type="text" id="cert-name"></div>
+              <div class="form-group"><label>Date</label><input type="text" id="cert-date" placeholder="January 2026"></div>
+            </div>
+            <button class="btn btn-white" onclick="addCert()">Add Certification</button>
+          </div>
+        </div>
+
+        <!-- SETTINGS TAB -->
+        <div class="admin-section" id="tab-settings">
+          <h2>Settings</h2>
+          <div style="border:1px solid #333; padding:1.5rem; margin-bottom:1.5rem;">
+            <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:1.25rem;color:#aaa;">Change Password</h3>
+            <div class="form-group"><label>New Password</label><input type="password" id="new-pw"></div>
+            <div class="form-group"><label>Confirm Password</label><input type="password" id="confirm-pw"></div>
+            <button class="btn btn-white" onclick="changePw()">Update Password</button>
+          </div>
+          <div style="border:1px solid #c003; padding:1.5rem;">
+            <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:0.75rem;color:#c44;">Danger Zone</h3>
+            <p style="font-family:var(--font-mono);font-size:0.75rem;color:#555;margin-bottom:1.25rem;">Reset all content to defaults. This cannot be undone.</p>
+            <button class="btn btn-danger btn-sm" onclick="if(confirm('Reset all data to defaults?'))resetData()">Reset to Defaults</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
 </html>
